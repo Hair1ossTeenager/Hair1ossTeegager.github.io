@@ -4,7 +4,9 @@ title = "打工人，冲冲冲！！！"
 theme = "ananke"
 
 [params]
+  site_logo = ""  # 左上角 logo
   favicon = "/favicon.ico"
   github = "https://github.com/Hair1ossTeenager"
   featured_image = "/images/gohugo-default-sample-hero-image.jpg"
+  background_color_class = "bg-black"
   recent_posts_number = 2
