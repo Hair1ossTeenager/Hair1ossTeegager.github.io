@@ -2,3 +2,9 @@ baseURL = "https://blog.zfsnw2g.top"
 languageCode = "en-us"
 title = "打工人，冲冲冲！！！"
 theme = "ananke"
+
+[params]
+  favicon = "/favicon.ico"
+  github = "https://github.com/Hair1ossTeenager"
+  featured_image = "/images/gohugo-default-sample-hero-image.jpg"
+  recent_posts_number = 2
