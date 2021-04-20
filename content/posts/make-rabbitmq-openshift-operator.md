@@ -26,7 +26,7 @@ draft: false
 #### 修改部分源码
 1. 删除 rabbitmq-operator/.github 目录，此目录是官方 github action 部分的代码，对其他项目无用（也可以不删除）
 2. 在 rabbitmq-operator/internal/resource 目录新建 anyuid_role_binding.go 文件，将下面代码复制到文件中，代码是根据 role_binding.go 文件修改来的，目的是解决 openshift scc 权限问题
-```
+```go
 // RabbitMQ Cluster Operator
 //
 // Copyright 2020 VMware, Inc. All Rights Reserved.
