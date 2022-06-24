@@ -55,7 +55,7 @@ function create_backup_dir() {
 
 function backup_mongo() {
     echo "备份 mongo 数据"
-    mongodump -h $MONGO_HOST -p $MONGO_PORT -u $MONGO_USER -p $MONGO_PASSWORD --authenticationDatabase $AUTHENTICATION_DB --gzip --out $backup_dir
+    mongodump -h $MONGO_HOST:$MONGO_PORT -u $MONGO_USER -p $MONGO_PASSWORD --authenticationDatabase $AUTHENTICATION_DB --gzip --out $backup_dir
 }
 
 function upload_to_oss() {
@@ -66,7 +66,7 @@ function upload_to_oss() {
 
 function restore_mongo() {
     echo "恢复 mongo 数据"
-    mongorestore -h $MONGO_HOST -p $MONGO_PORT -u $MONGO_USER -p $MONGO_PASSWORD --authenticationDatabase $AUTHENTICATION_DB --drop --gzip /$RESTORE_DIR
+    mongorestore -h $MONGO_HOST:$MONGO_PORT -u $MONGO_USER -p $MONGO_PASSWORD --authenticationDatabase $AUTHENTICATION_DB --drop --gzip /$RESTORE_DIR
 }
 
 function download_from_oss() {
